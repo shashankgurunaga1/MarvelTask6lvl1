@@ -1,0 +1,23 @@
+rm -rf /tmp/ex1 ; mkdir /tmp/ex1; last | egrep -E "Dec 2[5-7]
+([0-1][0-9]|2[0-3]):[0-5][0-9]" > /tmp/ex1/login_logs_data.log; mkdir
+/tmp/ex1/logs; mv /tmp/ex1/login_logs_data.log /tmp/ex1/logs; tar -zcf
+/tmp/ex1/tar_logs.tar.gz -C /tmp/ex1 logs ;
+
+
+
+
+
+$vi /tmp/ex1/logs/login_logs_data.log
+
+SGURUNAG  console                   Tue Dec 27 20:13 - 09:24 (4+13:10)
+reboot    ~                         Tue Dec 27 20:13
+shutdown  ~                         Tue Dec 27 20:13
+SGURUNAG  console                   Tue Dec 27 16:11 - 20:13 (04:01)
+reboot    ~                         Tue Dec 27 16:11
+SGURUNAG  console                   Sun Dec 25 09:37 - 15:34 (1+05:56)
+reboot    ~                         Sun Dec 25 09:37
+
+
+$ ls /tmp/ex1/tar_logs.tar.gz
+
+/tmp/ex1/tar_logs.tar.gz
